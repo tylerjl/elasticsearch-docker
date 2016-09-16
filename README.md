@@ -51,7 +51,7 @@ export ELASTIC_REG=container-registry.elastic.co/elasticsearch
 ##### Run instance listening on localhost port 9200:
 
 ``` shell
-docker run -d -p 9200:9200 -v esdatavolume:/usr/share/elasticsearch/data $ELASTIC_REG/elasticsearch:5.0.0-alpha5
+docker run -d -p 9200:9200 -v esdatavolume:/usr/share/elasticsearch/data --name elasticsearch $ELASTIC_REG/elasticsearch:5.0.0-alpha5
 ```
 
 This example uses a [Docker named volume](https://docs.docker.com/engine/tutorials/dockervolumes/) called `esdatavolume` which will be created if not present.
